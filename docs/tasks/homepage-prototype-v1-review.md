@@ -34,3 +34,11 @@ Addresses the owner's review at https://github.com/lidialuncian/the-history-of/p
 Validation of the refinement: lint, TypeScript, production build and diff whitespace checks passed. Production Chrome screenshots inspected at 320px, 375px, 768px and 1440px. Browser measurements found no horizontal overflow at those widths, 720×450 short landscape, or 320px with root text doubled to 200%. At desktop all three images share a row and height. Tab reaches the visible skip link with a solid focus outline; reduced-motion emulation reports native `auto` scrolling. The only navigation links target existing page anchors. These checks are focused verification, not a full accessibility audit.
 
 The owner approved these code changes for commit and push to PR #1. Nothing merged.
+
+## Local exhibit asset integration — approved
+
+Uses the owner's asset handoff in PR #1 (https://github.com/lidialuncian/the-history-of/pull/1#issuecomment-6688176780): three original AI-generated WebP illustrations in `public/images/exhibits/`. These replace all three visible CSS placeholders through the existing typed image data and `next/image` card rendering. Each has descriptive alt text and the visible disclosure “AI-generated illustrative artwork”; these are not archival images or historical evidence. The fallback remains available for future subjects without images. All three exhibits remain Coming soon.
+
+The existing responsive dimensions and centered object-fit crops were preserved. Ballet's full pose remains readable at 320px and desktop. Lint, TypeScript, production build and whitespace checks pass. Production Chrome checks on port 3000 verified all three optimized images decode successfully, no horizontal overflow at 320/375/768/1440px or 200% root text at 320px, visible keyboard focus and reduced-motion native scrolling. Mobile and desktop gallery screenshots were inspected.
+
+The owner approved the image integration and full-width header-divider refinement for commit and push to PR #1. The later masthead/hero proposal is outside this asset integration. Do not merge.

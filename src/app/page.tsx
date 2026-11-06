@@ -6,11 +6,13 @@ export default function Home() {
   return (
     <>
       <a className="skip-link" href="#main">Skip to content</a>
-      <header className="site-header page-width">
-        <span className="wordmark">THE HISTORY OF...</span>
-        <nav aria-label="Main navigation">
-          <a className="nav-link" href="#collection">Explore <ArrowDown size={14} aria-hidden="true" /></a>
-        </nav>
+      <header className="site-header">
+        <div className="site-header-inner page-width">
+          <span className="wordmark">THE HISTORY OF...</span>
+          <nav aria-label="Main navigation">
+            <a className="nav-link" href="#collection">Explore <ArrowDown size={14} aria-hidden="true" /></a>
+          </nav>
+        </div>
       </header>
       <main id="main" tabIndex={-1}>
         <section className="entrance page-width" aria-labelledby="entrance-title">
