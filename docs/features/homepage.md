@@ -52,3 +52,18 @@ Introduce The History Of... as an immersive editorial destination and invite exp
 - Centered max-width container around 1100–1200px; headline max-width around 900px; supporting text around 440px.
 - Top navigation, centered eyebrow, headline, short description, exploration link, and low-contrast bottom metadata.
 - Maintain accessible focus states, reduced-motion compatibility, and semantic heading hierarchy.
+
+## Approved collection direction (2026-11-06)
+- The next primary section after the editorial entrance is an exhibition/collection gallery, not a full-height ballet feature.
+- Use a hybrid editorial grid: mostly consistent cards, occasionally larger featured exhibits.
+- Cards represent individual subjects (initial concepts: ballet, tango, opera); clicking opens a subject's immersive page when available.
+- Keep the gallery visually cohesive and easily scannable as the collection expands. Subject-specific identity appears mainly in imagery and carefully restrained accents.
+
+## Gallery proposals — pending refinement
+- Standard cards: consistent 3:4 image treatment and metadata/title/one-line description.
+- Featured cards: deliberate 2-column spans on spacious screens; not fullscreen.
+- Suggested responsive behavior: 3 columns on wide desktop, 2 on tablet, 1–2 on small mobile depending on width and readability.
+- Homepage shows a curated subset; full collection has category filtering/search as it grows.
+- Hover/focus actions should preserve clear navigation and reduced-motion support; ensure all cards work by touch and keyboard.
+- Avoid arbitrary-height masonry and long single-subject blocks.
+- Ballet should no longer be treated as the mandatory giant second section.
