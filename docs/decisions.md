@@ -38,3 +38,10 @@ When we approve a decision in ChatGPT, update this log and the corresponding fea
 - Decision: Use a centered, symmetrical composition for the homepage hero, with the headline as the sole dominant focal point, generous negative space, and a restrained text-led discovery action. No dominant photography in the opening hero.
 - Why: Evokes the opening page of a museum catalog and creates contrast with immersive content further down.
 - Consequences: Build a responsive centered layout with accessible typography and navigation. Exact copy, fonts, size tokens, and ornamentation remain proposals until approved.
+
+### 2026-11-06 — Homepage collection replaces full-height subject showcase
+- Status: approved
+- Context: A fullscreen feature for every subject would create excessive scrolling as the catalog grows.
+- Decision: After the editorial entrance, introduce a browsable exhibition/collection area with individual cards. Use a hybrid structured editorial gallery: mostly consistent cards with occasional featured exhibits.
+- Why: Makes multiple subjects visible quickly while preserving museum-like curation and room for visual expression.
+- Consequences: The collection is not a sequence of fullscreen subject sections. The immersive subject-specific experience begins on each subject's own page. Exact column counts, filter behavior, card measurements, and featured-card scheduling remain proposals.
