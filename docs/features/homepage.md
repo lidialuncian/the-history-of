@@ -39,3 +39,16 @@ Introduce The History Of... as an immersive editorial destination and invite exp
 - Media has meaningful alt text and legitimate usage rights.
 - No unnecessary motion for reduced-motion users.
 - Page communicates the product concept without relying on animation.
+
+## Approved composition (2026-11-06)
+- Centered, symmetrical headline and content hierarchy.
+- A quiet museum-catalog feeling with generous whitespace.
+- Text-led exploration affordance; imagery deferred to the featured story.
+
+## Responsive design proposals — pending approval
+- Display serif candidate: Cormorant Garamond (400–500); UI sans candidate: DM Sans (400–600).
+- Desktop display size around 96–120px; mobile around 48–64px, with fluid clamp values adjusted after browser testing.
+- Desktop hero around 85–95svh; mobile content-aware min-height and padding, avoiding text overflow on short screens.
+- Centered max-width container around 1100–1200px; headline max-width around 900px; supporting text around 440px.
+- Top navigation, centered eyebrow, headline, short description, exploration link, and low-contrast bottom metadata.
+- Maintain accessible focus states, reduced-motion compatibility, and semantic heading hierarchy.
