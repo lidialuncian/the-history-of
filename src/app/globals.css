@@ -20,24 +20,27 @@ a { color: inherit; text-decoration: none; }
 a:focus-visible { outline: 2px solid var(--wine); outline-offset: 6px; border-radius: 2px; }
 ::selection { background: #e0c7c9; }
 .page-width { width: min(100% - 3rem, 76rem); margin-inline: auto; }
-.site-header { border-bottom: 1px solid var(--rule); }
-.site-header-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 1.75rem; }
+.site-header-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 1.25rem; border-bottom: 1px solid var(--rule); }
+.masthead { display: flex; flex-direction: column; gap: .25rem; }
+.masthead-title { font-family: var(--font-display), "Times New Roman", serif; font-size: clamp(1.5rem, 1.1rem + 1vw, 2rem); font-weight: 500; line-height: 1.1; }
+.masthead-label { color: var(--muted); font-size: .55rem; letter-spacing: .16em; text-transform: uppercase; }
 .wordmark { font-size: .75rem; font-weight: 600; letter-spacing: .15em; }
-.nav-link { display: inline-flex; gap: .65rem; align-items: center; padding-block: .75rem; font-size: .8rem; }
+.nav-link { display: inline-flex; gap: .65rem; align-items: center; min-height: 44px; padding-block: .75rem; font-size: .8rem; }
 .nav-link:hover, .explore-link:hover { color: var(--wine); }
 .entrance {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-block: clamp(3.5rem, 8vh, 7rem) clamp(4rem, 10vh, 8rem);
+  padding-block: clamp(3rem, 6vh, 4.5rem) 2rem;
   text-align: center;
 }
+.entrance-content { display: flex; flex-direction: column; align-items: center; flex: 1; justify-content: center; width: 100%; }
 .eyebrow { margin: 0; color: var(--muted); text-transform: uppercase; letter-spacing: .19em; font-size: .65rem; font-weight: 500; line-height: 1.8; }
 h1, h2, h3 { font-family: var(--font-display), "Times New Roman", serif; font-weight: 400; overflow-wrap: anywhere; }
 h1 {
   max-width: 10ch;
-  font-size: clamp(3rem, 1.25rem + 7vw, 7.5rem);
+  font-size: clamp(3rem, 1.25rem + 7vw, 7rem);
   line-height: 1;
   letter-spacing: -.04em;
   text-wrap: balance;
@@ -100,7 +103,7 @@ h3 { margin: 0; font-size: 2rem; line-height: 1.1; }
 .skip-link:focus { transform: translateY(0); }
 /* Minimum height supplies breathing room without clipping growing content. */
 @media (min-width: 48rem) and (min-height: 40rem) {
-  .entrance { min-height: min(52rem, calc(100svh - 7rem)); }
+  .entrance { min-height: min(39rem, calc(100svh - 18rem)); }
 }
 @media (min-width: 30rem) {
   .exhibit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -114,14 +117,18 @@ h3 { margin: 0; font-size: 2rem; line-height: 1.1; }
   .exhibit-grid-trio .exhibit-visual { aspect-ratio: auto; height: clamp(15rem, 26vw, 22rem); }
 }
 @media (max-width: 42rem) {
+  .masthead-label { display: none; }
+  .entrance { padding-block: 3rem; }
   .collection-heading { display: block; }
   .collection-heading > p { margin-top: 1rem; }
   .site-footer { align-items: start; flex-direction: column; }
 }
 @media (max-width: 29.99rem) {
+  .site-header-inner { gap: .5rem; }
+  .masthead-title { font-size: 1.4rem; }
   .page-width { width: calc(100% - 2rem); }
   .wordmark { font-size: .65rem; letter-spacing: .09em; }
-  .entrance { padding-block: 3.5rem 4rem; }
+  .entrance { padding-block: 3rem; }
 }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }

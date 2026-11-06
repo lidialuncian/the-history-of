@@ -42,3 +42,19 @@ Uses the owner's asset handoff in PR #1 (https://github.com/lidialuncian/the-his
 The existing responsive dimensions and centered object-fit crops were preserved. Ballet's full pose remains readable at 320px and desktop. Lint, TypeScript, production build and whitespace checks pass. Production Chrome checks on port 3000 verified all three optimized images decode successfully, no horizontal overflow at 320/375/768/1440px or 200% root text at 320px, visible keyboard focus and reduced-motion native scrolling. Mobile and desktop gallery screenshots were inspected.
 
 The owner approved the image integration and full-width header-divider refinement for commit and push to PR #1. The later masthead/hero proposal is outside this asset integration. Do not merge.
+
+## Balanced Editorial Entrance V2 — pending owner code and visual approval
+
+Implements `docs/tasks/homepage-v2-balanced-entrance.md` and PR #1 comment https://github.com/lidialuncian/the-history-of/pull/1#issuecomment-6688386285. The full-width header keeps its inner content alignment, with a mixed-case serif masthead and supporting catalog label. Navigation now reads “The Collection” with a minimum 44px touch height. The centered hero uses a shorter content-aware minimum height, fluid display type, “Discover the Collection” anchor and one quiet metadata row. Supporting masthead text and metadata are hidden on smaller screens. Existing colors, exhibit cards, imagery, gallery grid, keyboard focus and reduced-motion handling remain intact. No dependencies added.
+
+Final validation: lint, TypeScript, production build and diff checks pass. Production Chrome checks on port 3000 cover 320/375/768/1440px, short landscape 720×450 and doubled root text at 320px, with no horizontal overflow. Skip-link keyboard focus is visible; reduced-motion mode uses native `auto` scrolling. At 1440×900 the collection heading and first image edges are visible without scrolling. Exact font sizes and spacing remain provisional pending visual review.
+
+Review screenshots (local artifacts): `/tmp/homepage-v2-1440x900.png`, `/tmp/homepage-v2-768x1024.png`, `/tmp/homepage-v2-375x812.png`. Owner requested code approval before commit/push; this iteration remains local pending approval. Do not merge PR #1 before screenshot review.
+
+### Simplified V2 comparison — pending review
+
+At the owner’s request, removed the header divider and hero metadata row so only the collection rule separates the entrance and gallery. Serif masthead, collection navigation, hero typography, palette and cards remain. Supersedes the metadata/header-rule treatment described in the first V2 iteration above. Lint, TypeScript, production build and browser checks pass, including 320px, 375px, tablet, desktop, short landscape, doubled root text, keyboard focus and reduced motion. New comparison screenshots: `/tmp/homepage-calm-1440x900.png`, `/tmp/homepage-calm-768x1024.png`, `/tmp/homepage-calm-375x812.png`. Changes remain local for code and visual approval.
+
+### Matched divider revision — approved
+
+The owner selected restoring the header line at the collection’s content width. The border now belongs to `.site-header-inner.page-width`, matching the collection rule’s width, color and weight at every breakpoint. Hero metadata remains removed; the rest of the current visual iteration is preserved. This supersedes the full-width/no-header-divider treatments above. The owner approved the final combined V2 revision for commit and push to PR #1. Earlier pending-review notes describe intermediate iterations; the matched dividers and removed metadata are the final selected treatment. Do not merge.
