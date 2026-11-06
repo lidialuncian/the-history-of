@@ -15,8 +15,8 @@ export default function Home() {
       <main id="main" tabIndex={-1}>
         <section className="entrance page-width" aria-labelledby="entrance-title">
           <p className="eyebrow">An exploration through time</p>
-          <h1 id="entrance-title">Everything has<br />a <em>history.</em></h1>
-          <p className="entrance-description">Discover the extraordinary stories behind<br className="desktop-break" /> the things that move us.</p>
+          <h1 id="entrance-title">Everything has a <em>history.</em></h1>
+          <p className="entrance-description">Discover the extraordinary stories behind the things that move us.</p>
           <a className="explore-link" href="#collection">Explore the stories <ArrowDown size={17} aria-hidden="true" /></a>
         </section>
         <section id="collection" className="collection page-width" aria-labelledby="collection-title" tabIndex={-1}>
