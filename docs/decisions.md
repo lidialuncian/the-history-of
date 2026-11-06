@@ -31,3 +31,10 @@ When we approve a decision in ChatGPT, update this log and the corresponding fea
 - Decision: Use a calm, typography-led editorial hero with warm ivory foundation and a prominent exhibition-style headline, rather than fullscreen imagery or video at the top. Reserve immersive photography for the featured story that follows. The homepage acts as a neutral gateway to subject-specific visual worlds.
 - Why: Establishes an elegant identity and makes the transition into individual subjects more emotionally distinct.
 - Consequences: Homepage hero should prioritize readable typography, clear discovery action, responsive composition, and reduced-motion-friendly behavior. Exact copy, typeface, spacing, and breakpoints are still provisional.
+
+### 2026-11-06 — Centered symmetrical homepage hero
+- Status: approved
+- Context: The editorial entrance needs a specific layout direction.
+- Decision: Use a centered, symmetrical composition for the homepage hero, with the headline as the sole dominant focal point, generous negative space, and a restrained text-led discovery action. No dominant photography in the opening hero.
+- Why: Evokes the opening page of a museum catalog and creates contrast with immersive content further down.
+- Consequences: Build a responsive centered layout with accessible typography and navigation. Exact copy, fonts, size tokens, and ornamentation remain proposals until approved.
