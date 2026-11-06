@@ -45,3 +45,10 @@ When we approve a decision in ChatGPT, update this log and the corresponding fea
 - Decision: After the editorial entrance, introduce a browsable exhibition/collection area with individual cards. Use a hybrid structured editorial gallery: mostly consistent cards with occasional featured exhibits.
 - Why: Makes multiple subjects visible quickly while preserving museum-like curation and room for visual expression.
 - Consequences: The collection is not a sequence of fullscreen subject sections. The immersive subject-specific experience begins on each subject's own page. Exact column counts, filter behavior, card measurements, and featured-card scheduling remain proposals.
+
+### 2026-11-06 — Editorial exhibit card specification
+- Status: approved
+- Context: The homepage uses a scalable hybrid exhibition gallery; cards need a consistent, curiosity-driven information density.
+- Decision: Standard cards present an image, small category/exhibit label, editorial serif subject title, and one intriguing sentence. The entire card is a semantic link, without nested navigation buttons or hover-only content. Featured cards reuse this anatomy but may span two columns with wider imagery; they are never fullscreen. Cards use restrained styling without opaque panels, heavy borders, or shadows.
+- Why: Balances the atmosphere of a curated exhibition with clear, fast scanning and good accessibility.
+- Consequences: Implement shared card variants with clear hover, focus, touch and reduced-motion behavior. Precise measurements, breakpoint values, font selections, category controls, media assets and initial published-card availability remain provisional.
