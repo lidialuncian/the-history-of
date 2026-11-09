@@ -30,15 +30,17 @@ export default function BalletPage() {
             <p className="ballet-deck">An art of fleeting moments.<br />A story centuries in the making.</p>
             <p className="ballet-heroDescription">From courtly gatherings to worlds imagined on stage, follow the changing shape of a living art.</p>
             <a href="#renaissance-courts" className="ballet-beginLink">Enter the exhibition <ArrowDown size={16} aria-hidden="true" /></a>
-            <p className="ballet-edition">First edition · Provisional editorial draft</p>
           </div>
           <figure className="ballet-heroFigure">
             <div className="ballet-heroImage">
-              <Image src={artwork.src} alt={`Illustration: ${artwork.alt}`} fill sizes="(min-width: 960px) 55vw, 100vw" preload />
+              <Image src={artwork.src} alt={`Illustration: ${artwork.alt}`} width={1672} height={941} sizes="(min-width: 960px) 55vw, 100vw" preload />
             </div>
             <figcaption>{artwork.attribution} · Not an archival photograph</figcaption>
           </figure>
         </section>
+        <aside className="ballet-draftNotice" aria-label="Editorial status">
+          <p><strong>First edition · Provisional editorial draft.</strong> All chapter text and periods await historical verification. <a href="#editorial-note">Read the editorial note</a>.</p>
+        </aside>
         <div className="ballet-threshold">
           <p>Six rooms. One evolving art.</p>
           <span>Read at your own pace, or choose a chapter below.</span>
@@ -58,7 +60,6 @@ export default function BalletPage() {
                     <span className="ballet-motif" aria-hidden="true">{chapter.motif}</span>
                   </div>
                   <div className="ballet-storyText">
-                    <p className="ballet-draftLabel">Provisional narrative · Sources pending</p>
                     {chapter.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                     {chapter.discoveries?.map((discovery) => (
                       <aside key={discovery.id} className="ballet-discovery" aria-labelledby={`${discovery.id}-title`}>

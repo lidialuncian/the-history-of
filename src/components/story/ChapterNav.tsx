@@ -9,6 +9,11 @@ export function ChapterNav({ chapters }: { chapters: readonly ChapterLink[] }) {
   const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
+    const index = document.querySelector<HTMLDetailsElement>(".ballet-chapterIndex");
+    const desktop = window.matchMedia("(min-width: 60rem)");
+    const syncIndex = () => { if (index) index.open = desktop.matches; };
+    syncIndex();
+    desktop.addEventListener("change", syncIndex);
     const sections = chapters.map(({ id }) => document.getElementById(id));
     let frame = 0;
     const update = () => {
@@ -26,26 +31,37 @@ export function ChapterNav({ chapters }: { chapters: readonly ChapterLink[] }) {
     window.addEventListener("scroll", schedule, { passive: true });
     window.addEventListener("resize", schedule);
     return () => {
+      desktop.removeEventListener("change", syncIndex);
       cancelAnimationFrame(frame);
       window.removeEventListener("scroll", schedule);
       window.removeEventListener("resize", schedule);
     };
   }, [chapters]);
 
+  const currentChapter = chapters.find((chapter) => chapter.id === active);
+
   return (
     <nav className="ballet-chapterNav" aria-label="Ballet chapters">
-      <p className="ballet-navTitle">Inside the exhibition <span>Six chapters</span></p>
-      <ol>
-        {chapters.map((chapter, index) => (
-          <li key={chapter.id}>
-            <a href={`#${chapter.id}`} aria-current={active === chapter.id ? "location" : undefined}>
-              <span className="ballet-navNumber" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-              <span>{chapter.label}<small>{chapter.period}</small></span>
-            </a>
-          </li>
-        ))}
-      </ol>
-      <a className="ballet-navFoot" href="#editorial-note">About this first edition ↗</a>
+      <details className="ballet-chapterIndex">
+        <summary>
+          <span className="ballet-indexAction">Explore chapters</span>
+          <span className="ballet-currentChapter">{currentChapter ? `Reading: ${currentChapter.label}` : "Six rooms · Choose your path"}</span>
+        </summary>
+        <div className="ballet-indexLinks">
+          <p className="ballet-navTitle">Inside the exhibition <span>Six chapters</span></p>
+          <ol>
+            {chapters.map((chapter, index) => (
+              <li key={chapter.id}>
+                <a href={`#${chapter.id}`} aria-current={active === chapter.id ? "location" : undefined}>
+                  <span className="ballet-navNumber" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                  <span>{chapter.label}<small>{chapter.period}</small></span>
+                </a>
+              </li>
+            ))}
+          </ol>
+          <a className="ballet-navFoot" href="#editorial-note">About this first edition ↗</a>
+        </div>
+      </details>
     </nav>
   );
 }
