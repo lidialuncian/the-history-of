@@ -33,9 +33,9 @@ export default function BalletPage() {
           </div>
           <figure className="ballet-heroFigure">
             <div className="ballet-heroImage">
-              <Image src={artwork.src} alt={`Illustration: ${artwork.alt}`} width={1672} height={941} sizes="(min-width: 960px) 55vw, 100vw" preload />
+              <Image src="/images/exhibits/ballet-arch-v2.webp" alt={`Illustration: ${artwork.alt}`} width={1122} height={1402} sizes="(min-width: 960px) 55vw, 100vw" preload />
             </div>
-            <figcaption>{artwork.attribution} · Not an archival photograph</figcaption>
+            <figcaption>{artwork.attribution} · AI-extended backdrop · Not an archival photograph</figcaption>
           </figure>
         </section>
         <aside className="ballet-draftNotice" aria-label="Editorial status">
@@ -82,7 +82,7 @@ export default function BalletPage() {
           <p className="ballet-eyebrow">A note from the exhibition</p>
           <h2 id="editorial-title">A first draft, with room to grow.</h2>
           <p>All chapter text and period labels are provisional editorial scaffolding adapted from our approved exhibition outline, not a verified historical publication. Periods overlap; these rooms are narrative guides, not exact boundaries.</p>
-          <p>Historical references, artist profiles and archival media await research and editorial review. No historical quotations or archival objects are presented in this edition. The opening artwork is an existing AI-generated illustration from our collection, not evidence of a particular dancer, costume, performance or era.</p>
+          <p>Historical references, artist profiles and archival media await research and editorial review. No historical quotations or archival objects are presented in this edition. The opening artwork is an AI-generated variant of our collection illustration, with an extended stage backdrop, not evidence of a particular dancer, costume, performance or era.</p>
           <a href="#ballet-title" className="ballet-nextLink">Back to the entrance ↑</a>
         </section>
       </main>

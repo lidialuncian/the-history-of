@@ -1,6 +1,6 @@
 # Ballet Phase 1 review
 
-Implemented on `feat/ballet-living-exhibition` against the approved [Phase 1 task](../../tasks/ballet-living-exhibition-phase-1.md). Owner visual/editorial review is required before merge.
+Implemented on `feat/ballet-living-exhibition` against the approved [Phase 1 task](../../tasks/ballet-living-exhibition-phase-1.md). The owner approved the final hero framing and authorized commit/push on 2026-11-09. This is still a provisional editorial draft; the PR remains unmerged.
 
 ## Changed files
 
@@ -9,11 +9,12 @@ Implemented on `feat/ballet-living-exhibition` against the approved [Phase 1 tas
 - `src/data/ballet.ts`: typed static chapter/story data and a stable discovery identity with subject/chapter associations.
 - `src/components/story/ChapterNav.tsx`: native anchors enhanced with a reading-location indicator, passive scroll observation and cleaned-up listeners. No historical progress percentage or forced scrolling.
 - `src/data/subjects.ts`: Ballet published at `/ballet`; Tango and Opera remain coming soon. Homepage components and global styles are unchanged.
-- This directory: screenshot evidence and review notes.
+- `public/images/exhibits/ballet-arch-v2.webp`: attributed portrait variant with extended stage backdrop; original homepage asset preserved.
+- This directory: final screenshots, review notes and image-edit prompt.
 
 ## Screenshots
 
-Captured from the successful production build in headless Chrome, using the existing project fonts and reduced-motion preference.
+Captured from the final live localhost:3000 preview in headless Chrome, using the existing project fonts and reduced-motion preference. The production build also passed.
 
 - [Desktop entrance, 1440 × 1000](desktop.png)
 - [Desktop Romantic chapter and active rail, 1440 × 1000](desktop-chapter.png)
@@ -29,7 +30,7 @@ Captured from the successful production build in headless Chrome, using the exis
 - `npm run lint` — passed.
 - `npx tsc --noEmit` — passed.
 - `npm run build` — passed; `/` and `/ballet` statically prerendered. Initial attempts encountered sandbox font-download/port-binding failures; a clean build with permission succeeded. No Next configuration or dependency changes.
-- Browser checks at 320, 375, 768 and 1440 CSS pixels: no horizontal document overflow; hero image loaded at each width; all six chapter sections present; route CSS applied.
+- Browser checks at 320, 375, 768, 960, 1024 and 1440 CSS pixels: no horizontal document overflow; hero image loaded at each width; all six chapter sections present; route CSS applied.
 - Pointer jump to Romantic dream: URL hash, focused section and `aria-current="location"` matched.
 - Keyboard: first Tab exposes the skip link; Enter focuses main. Keyboard chapter activation focuses the target section and updates the active indicator.
 - Reduced-motion enabled during checks: native anchor jumps remain usable without animation. No new animations, autoplay or motion dependencies.
@@ -42,29 +43,25 @@ Captured from the successful production build in headless Chrome, using the exis
 
 The sole content source for this skeleton is the repository's approved Phase 1 brief and its six-room outline. All narrative and approximate period labels are explicitly provisional; no external historical research, verified historical citations or quotations are claimed. The page keeps a visible editorial note and clearly labels the entire edition as awaiting historical verification near the start, with a detailed note at the end.
 
-`public/images/exhibits/ballet.webp` is reused from the existing subject collection. Its existing attribution is **AI-generated illustrative artwork**. It is visibly labeled as non-archival; it does not identify a real performer, production, costume or date. Chapter ornaments are CSS geometry, not historical artifacts. No external or newly generated media were added.
+`public/images/exhibits/ballet.webp` remains the unchanged homepage illustration. The Ballet route uses `public/images/exhibits/ballet-arch-v2.webp` (1122 × 1402), a portrait variant created from it with the built-in imagegen tool and WebP-encoded with the installed Sharp package. The stage backdrop extends continuously above the dancer to protect the raised hand inside the original arch. Generative editing can reinterpret details; this is a variant rather than a pixel-identical outpaint. See the exact [edit prompt](image-edit-prompt.txt).
+
+The page visibly credits **AI-generated illustrative artwork · AI-extended backdrop · Not an archival photograph**. Neither image identifies a real performer, production, costume or date. Chapter ornaments are CSS geometry, not historical artifacts. No external archival media were added.
 
 ## Remaining editorial decisions
 
 - Verify chronology, overlapping period boundaries and every chapter's narrative against reputable sources in Phase 2.
 - Select people, institutions, productions and primary sources; determine archival asset licensing and captions before adding them.
-- Review the romantic palette, six room treatments, mobile index and final narrative length from these screenshots.
+- Final hero framing is visually approved. Continue editorial review of the six room narratives and final story length in Phase 2.
 - The costume discovery remains a labeled static preview, with no drawer or hotspot behavior. Its actual content and media need research and later-phase approval.
 - No blockers remain for Phase 1 code review. Historical publication readiness and later-phase interactions remain intentionally pending.
 
-## Owner review refinements — 2026-11-09
+## Approved visual refinements — 2026-11-09
 
-Addressed both owner feedback notes on PR #2 within Phase 1:
+The owner approved the final local preview and authorized commit/push. The PR remains unmerged.
 
-- Mobile chapter navigation is now a native `details` / `summary` disclosure, collapsed by default with current reading context. Native anchors remain keyboard accessible. At desktop widths it opens as the existing rail; without JavaScript the disclosure still opens normally.
-- Removed six repetitive draft labels. One accessible, visible edition notice before the chapter sequence covers all narrative and period labels and links to the detailed closing editorial note.
-- Rooms 2 and 6 use a paired entrance/story layout on wide desktops. Both stay to the right of the rail, with the same bounded reading width. Smaller screens return to a comfortable vertical flow.
-- Moved the desktop rail 24px farther left and increased its gap to the chapter column by 24px at 1440px. The chapter column stays in its original position; mobile gutters remain 24px.
-- Reduced mobile hero spacing without reducing the readable text sizes. Updated mobile screenshots show the resulting opening rhythm.
-- Preserved the existing artwork and an arched frame. Following the owner's correction, removed the decorative cap and its 12% headroom. The frame now uses a wider 8:5 proportion and a shallower arch, with the original illustration filling it edge to edge. Both hands and feet remain visible; no extra background or source-image edits were added.
-
-Re-ran lint, TypeScript and production build successfully. Repeated 320/375/768/1440px, short-viewport, reduced-motion, focus/anchor and reflow checks. Source-image extremity coordinates were checked against the rendered arched clip at all four widths. The mobile index opens via keyboard; anchors move focus and update active location. All six links also work in the native disclosure with JavaScript disabled. No page errors or horizontal overflow. Updated screenshots replace the previous review captures.
-
-### Arch background correction
-
-Removed the unwanted decorative background after owner screenshot review. Only `src/app/ballet/ballet.css`, these review notes, and refreshed screenshots changed. Lint, TypeScript, production build and browser checks passed again, including full-pose geometry at 320/375/768/1440px. The wider, shallower arch is visible in the refreshed desktop and mobile pose screenshots and awaits owner visual review.
+- Mobile chapter navigation is a native disclosure, collapsed by default with current reading context. Desktop uses the active chapter rail. Native links work with keyboard and without JavaScript.
+- One visible edition notice replaces repeated chapter draft labels, with the detailed editorial note retained at the end.
+- Rooms 2 and 6 use paired entrance/story layouts on wide desktops. All chapter contents stay to the right of the rail. The rail sits 24px farther left with an increased gap; the reading column retains its original position.
+- The hero uses the original arch dimensions: approximately 673 × 691px at 1440px viewport, 35rem tablet height, and a 4:5 mobile frame. No decorative cap is present.
+- The portrait illustration variant sits at `object-position: center 65%`, leaving clear space around the full raised hand while retaining both feet. The whole raised-hand bounding box, other hand and both feet passed clip-boundary checks at 320/375/768/960/1024/1440px. Desktop and mobile screenshots were visually inspected on localhost:3000.
+- Lint, TypeScript and production build passed for this final implementation. Owner approval covers this visual framing; researched content and later phases remain pending.
