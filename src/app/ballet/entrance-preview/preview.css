@@ -1,0 +1,17 @@
+.entrance-study { background: #f5f0e8; min-height: 100svh; }
+.entrance-study-bar { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; border-bottom: 1px solid #d8cfc3; background: #eee3df; }
+.entrance-study-bar strong { font-size: .85rem; font-weight: 500; }
+.entrance-study-bar span { display: block; margin-top: .3rem; font-size: .7rem; color: #725c64; }
+.entrance-study-direct { display: inline-flex; align-items: center; min-height: 44px; font-size: .75rem; border-bottom: 1px solid #773d50; }
+.entrance-study-note { font-size: .8rem; line-height: 1.8; padding: .75rem 1.5rem; margin: 0; color: #725c64; }
+.entrance-study-destination { position: fixed; inset: 0; visibility: hidden; pointer-events: none; }
+.entrance-study-destination.is-visible { position: static; visibility: visible; pointer-events: auto; }
+.entrance-study[data-arriving="true"] > .entrance-study-bar, .entrance-study[data-arriving="true"] > .entrance-study-note { display: none; }
+.entrance-study-overlay { position: fixed; inset: 0; z-index: 30; pointer-events: none; overflow: hidden; }
+.entrance-study-plate, .entrance-study-landing { position: fixed; background: url('/images/ballet-entrance/stage-plate.webp') center / cover; }
+.entrance-study-landing { border-radius: 48% 48% 2px 2px; opacity: 0; }
+.entrance-study-dancer { position: fixed; left: 0; top: 0; background-image: url('/images/ballet-entrance/turn-study.webp'); background-size: 300% 300%; background-repeat: no-repeat; will-change: transform; filter: drop-shadow(0 8px 10px #392b3026); }
+.entrance-study-skip { position: fixed; z-index: 40; right: 1rem; top: 1rem; display: inline-flex; align-items: center; gap: 1rem; min-height: 48px; padding: .75rem 1.25rem; background: #faf3ef; color: #392b30; border: 1px solid #773d50; font-size: .85rem; }
+@media (prefers-reduced-motion: reduce) {
+  .entrance-study-overlay { display: none; }
+}

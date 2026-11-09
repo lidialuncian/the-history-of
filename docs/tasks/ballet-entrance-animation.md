@@ -60,3 +60,7 @@ A single flattened WebP image **cannot itself provide believable limb movement, 
 - Which visual movement can be achieved convincingly with existing resources, and which demands new image/video frames?
 - Can the approach preserve instant page navigation on reduced-motion and slow devices?
 - How can the transition finish convincingly in the Ballet hero without mismatched crops/subjects?
+
+## Stage A implementation status — 2026-11-09
+
+PR #2 is merged. This feature branch was synchronized with `origin/main` at `c709524` before implementation. An isolated nine-pose visual proof is available at `/ballet/entrance-preview`; the actual homepage entrance is not enabled. See [the feasibility review, asset requirements and recording](../review/ballet-entrance/README.md). Choreography smoothness, silhouette continuity and final hero matching still require visual review and additional registered motion assets before Stage B or a production PR.
