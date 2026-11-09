@@ -52,3 +52,11 @@ When we approve a decision in ChatGPT, update this log and the corresponding fea
 - Decision: Standard cards present an image, small category/exhibit label, editorial serif subject title, and one intriguing sentence. The entire card is a semantic link, without nested navigation buttons or hover-only content. Featured cards reuse this anatomy but may span two columns with wider imagery; they are never fullscreen. Cards use restrained styling without opaque panels, heavy borders, or shadows.
 - Why: Balances the atmosphere of a curated exhibition with clear, fast scanning and good accessibility.
 - Consequences: Implement shared card variants with clear hover, focus, touch and reduced-motion behavior. Precise measurements, breakpoint values, font selections, category controls, media assets and initial published-card availability remain provisional.
+
+
+### 2026-11-09 — Ballet Living Exhibition and progressive implementation
+- Status: approved
+- Context: The first subject should be an immersive experience while remaining accessible and readable.
+- Decision: Ballet will be a hybrid chronological Living Exhibition: evocative chapters, discreet timeline navigation, optional curated discovery cards and occasional interactive artwork. Preserve reading position when returning from a discovery; make motion optional. Work in phased iterations beginning with a responsive route and story skeleton.
+- Why: Provides emotional narrative and voluntary exploration while protecting reading flow and manageable implementation scope.
+- Consequences: Use reusable story structures and subject theming. Keep homepage as-is except linking Ballet. The signature ballerina-pirouette entrance is a separate later milestone. A cross-subject Cabinet of Curiosities is a future enhancement; design shared discovery identity without implementing it now. See `docs/tasks/ballet-living-exhibition-phase-1.md`.

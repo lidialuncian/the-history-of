@@ -5,7 +5,7 @@ export const subjects: readonly Subject[] = [
   {
     id: "ballet", number: "001", title: "Ballet", category: "Dance",
     description: "Behind the weightless beauty, a world of discipline, dreams, and reinvention.",
-    featured: true, status: "coming-soon", artwork: {
+    featured: true, status: "published", href: "/ballet", artwork: {
       theme: "ballet",
       image: {
         src: "/images/exhibits/ballet.webp",
