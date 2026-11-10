@@ -1,19 +1,26 @@
+"use client";
+
+import { useBalletEntrance } from "@/components/ballet/BalletEntrance";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { Subject } from "@/types/subject";
 
 export function ExhibitCard({ subject }: { subject: Subject }) {
+  const beginEntrance = useBalletEntrance();
+  const image = subject.artwork.image ? (
+    <Image
+      src={subject.artwork.image.src}
+      alt={subject.artwork.image.alt}
+      fill
+      sizes={subject.featured ? "(min-width: 72rem) 66vw, 100vw" : "(min-width: 30rem) 50vw, 100vw"}
+    />
+  ) : null;
   const content = (
     <>
       <div className={`exhibit-visual artwork-${subject.artwork.theme}`}>
-        {subject.artwork.image ? (
-          <Image
-            src={subject.artwork.image.src}
-            alt={subject.artwork.image.alt}
-            fill
-            sizes={subject.featured ? "(min-width: 72rem) 66vw, 100vw" : "(min-width: 30rem) 50vw, 100vw"}
-          />
+        {image ? (
+          subject.id === "ballet" ? <div className="ballet-cardFrame">{image}</div> : image
         ) : (
           <>
             <div className="artwork-composition" aria-hidden="true">
@@ -39,7 +46,10 @@ export function ExhibitCard({ subject }: { subject: Subject }) {
   return (
     <li className={`exhibit${subject.featured ? " exhibit-featured" : ""}`}>
       {subject.status === "published" ? (
-        <Link className="exhibit-link" href={subject.href}>{content}</Link>
+        <Link className="exhibit-link" href={subject.href} onClick={(event) => {
+          if (subject.id !== "ballet" || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          if (beginEntrance(event.currentTarget)) event.preventDefault();
+        }}>{content}</Link>
       ) : (
         <article>{content}</article>
       )}

@@ -155,3 +155,13 @@
   .ballet-deck { margin-block: 1rem .75rem; }
   .ballet-heroDescription { margin-block: .75rem; }
 }
+
+/* Retain the tall arch; fit the complete square stage below its crown. */
+.ballet-heroImage { background: #46332e; min-height: 0; }
+.ballet-heroImage img { inset: auto 0 0; height: auto; aspect-ratio: 1; object-fit: contain; object-position: center; }
+.ballet-heroImage img { left: 6%; bottom: 2%; width: 88%; }
+.ballet-heroImage { background-image: url('/animations/ballet/stage-extension-v2.webp'); background-size: 100% 100%; background-position: center; }
+.ballet-heroImage img {
+  mask-image: linear-gradient(to bottom, transparent, #000 1.5%, #000 98.5%, transparent), linear-gradient(to right, transparent, #000 3%, #000 97%, transparent);
+  mask-composite: intersect;
+}
