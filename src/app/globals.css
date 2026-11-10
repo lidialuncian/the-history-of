@@ -149,3 +149,13 @@ html[data-ballet-entrance="landing"] .ballet-entrance-film video {
   mask-image: linear-gradient(to bottom, transparent, #000 1.5%, #000 98.5%, transparent), linear-gradient(to right, transparent, #000 3%, #000 97%, transparent);
   mask-composite: intersect;
 }
+
+/* Extend the stage around the exact square start frame without scaling the dancer. */
+.exhibit-visual.artwork-ballet {
+  background-image: url('/animations/ballet/homepage-stage-extension-v2.webp');
+  background-position: center;
+  background-size: cover;
+}
+.ballet-cardFrame { position: absolute; top: 0; left: 50%; height: 100%; aspect-ratio: 1; max-width: 100%; translate: -50% 0; }
+.ballet-cardFrame img { mask-image: linear-gradient(to right, transparent, #000 1.5%, #000 98.5%, transparent); }
+.ballet-entrance-film video { mask-image: linear-gradient(to right, transparent, #000 1.5%, #000 98.5%, transparent); }

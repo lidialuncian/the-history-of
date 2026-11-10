@@ -49,3 +49,11 @@ Browser checks: complete desktop and mobile sequences, keyboard Enter activation
 ## Generated stage extension
 
 Built-in imagegen was used after the owner authorized additional background. Saved project asset: `public/animations/ballet/stage-extension-v2.webp`. Reference: updated `end-frame.png`. The generated output was inspected to verify no person/limb remained; the original still/video remains a separate unchanged foreground rectangle, rather than using a generated ballerina. Prompt: [stage-extension-prompt.txt](stage-extension-prompt.txt). No image-generation API key, new dependency or external image URL is required at runtime.
+
+## Homepage start-image background extension
+
+The owner also requested the same treatment for the homepage start artwork. Built-in imagegen created a wide, empty stage plate from `start-frame.png`, saved as `public/animations/ballet/homepage-stage-extension-v2.webp`. The approved start image remains a separate square foreground at the exact original video scale. Only the narrow outer background edges are feathered; the dancer is not regenerated or stretched. A Ballet-only frame wrapper in `ExhibitCard.tsx` and styles in `globals.css` align the square still with the existing measured playback square. Homepage card dimensions and other exhibits retain their design. The existing generated-artwork attribution applies to this surround too.
+
+[Generation prompt](homepage-stage-extension-prompt.txt). Screenshots: [320](homepage-background-320.png), [375](homepage-background-375.png), [768](homepage-background-768.png), [1440](homepage-background-1440.png), [playback](homepage-background-playing.png). Generated architecture is an approximate continuation; small seams can remain where it meets the approved frame.
+
+Homepage extension validation: Chrome at 320/375/768/1440 CSS pixels showed no horizontal overflow. At 1440, the still square and playback square had identical x/y/width/height (all differences zero). Playback and Escape skip passed. ESLint, TypeScript, diff whitespace check and the webpack production build passed after the wrapper change. The earlier full-sequence recordings predate this homepage surround; the dedicated homepage screenshots above show the latest start treatment.
