@@ -145,3 +145,7 @@ h3 { margin: 0; font-size: 2rem; line-height: 1.1; }
 .ballet-entrance-skip { position: fixed; z-index: 81; right: 1rem; bottom: 1rem; min-height: 44px; padding: .75rem 1.25rem; border: 1px solid #773d50; border-radius: 3px; background: #faf3ef; color: #392b30; cursor: pointer; }
 .ballet-entrance-skip:focus-visible { outline: 3px solid #773d50; outline-offset: 4px; }
 html[data-ballet-entrance="landing"] .ballet-heroImage img { visibility: hidden; }
+html[data-ballet-entrance="landing"] .ballet-entrance-film video {
+  mask-image: linear-gradient(to bottom, transparent, #000 1.5%, #000 98.5%, transparent), linear-gradient(to right, transparent, #000 3%, #000 97%, transparent);
+  mask-composite: intersect;
+}

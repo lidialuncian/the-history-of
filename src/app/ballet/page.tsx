@@ -35,7 +35,7 @@ export default function BalletPage() {
             <div className="ballet-heroImage">
               <Image src="/animations/ballet/approved-final.webp" alt={`Illustration: ${artwork.alt}`} width={1080} height={1080} sizes="(min-width: 960px) 55vw, 100vw" preload />
             </div>
-            <figcaption>{artwork.attribution} · Matched animation frame · Not an archival photograph</figcaption>
+            <figcaption>{artwork.attribution} · Matched animation frame · AI-extended stage backdrop · Not an archival photograph</figcaption>
           </figure>
         </section>
         <aside className="ballet-draftNotice" aria-label="Editorial status">
@@ -82,7 +82,7 @@ export default function BalletPage() {
           <p className="ballet-eyebrow">A note from the exhibition</p>
           <h2 id="editorial-title">A first draft, with room to grow.</h2>
           <p>All chapter text and period labels are provisional editorial scaffolding adapted from our approved exhibition outline, not a verified historical publication. Periods overlap; these rooms are narrative guides, not exact boundaries.</p>
-          <p>Historical references, artist profiles and archival media await research and editorial review. No historical quotations or archival objects are presented in this edition. The opening artwork is a matched frame from an AI-generated illustrative animation, not evidence of a particular dancer, costume, performance or era.</p>
+          <p>Historical references, artist profiles and archival media await research and editorial review. No historical quotations or archival objects are presented in this edition. The opening artwork is a matched frame from an AI-generated illustrative animation with an AI-extended stage surround, not evidence of a particular dancer, costume, performance or era.</p>
           <a href="#ballet-title" className="ballet-nextLink">Back to the entrance ↑</a>
         </section>
       </main>
