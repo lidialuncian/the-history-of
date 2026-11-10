@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
+import { BalletEntrance } from "@/components/ballet/BalletEntrance";
 
 const display = Cormorant_Garamond({
   variable: "--font-display", subsets: ["latin"], weight: ["400", "500"],
@@ -15,8 +16,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${sans.variable}`}>
-      <body>{children}</body>
+    <html lang="en" data-scroll-behavior="smooth" className={`${display.variable} ${sans.variable}`}>
+      <body><BalletEntrance>{children}</BalletEntrance></body>
     </html>
   );
 }

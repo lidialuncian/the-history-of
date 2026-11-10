@@ -8,7 +8,7 @@ export const subjects: readonly Subject[] = [
     featured: true, status: "published", href: "/ballet", artwork: {
       theme: "ballet",
       image: {
-        src: "/images/exhibits/ballet.webp",
+        src: "/animations/ballet/approved-start.webp",
         alt: "Ballerina in an ivory costume performing on a softly lit stage",
         attribution: "AI-generated illustrative artwork",
       },

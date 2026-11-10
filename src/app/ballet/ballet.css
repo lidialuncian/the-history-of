@@ -155,3 +155,8 @@
   .ballet-deck { margin-block: 1rem .75rem; }
   .ballet-heroDescription { margin-block: .75rem; }
 }
+
+/* Retain the tall arch; fit the complete square stage below its crown. */
+.ballet-heroImage { background: #46332e; min-height: 0; }
+.ballet-heroImage img { inset: auto 0 0; height: auto; aspect-ratio: 1; object-fit: contain; object-position: center; }
+.ballet-heroImage img { left: 6%; bottom: 2%; width: 88%; }

@@ -1,9 +1,13 @@
+"use client";
+
+import { useBalletEntrance } from "@/components/ballet/BalletEntrance";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { Subject } from "@/types/subject";
 
 export function ExhibitCard({ subject }: { subject: Subject }) {
+  const beginEntrance = useBalletEntrance();
   const content = (
     <>
       <div className={`exhibit-visual artwork-${subject.artwork.theme}`}>
@@ -39,7 +43,10 @@ export function ExhibitCard({ subject }: { subject: Subject }) {
   return (
     <li className={`exhibit${subject.featured ? " exhibit-featured" : ""}`}>
       {subject.status === "published" ? (
-        <Link className="exhibit-link" href={subject.href}>{content}</Link>
+        <Link className="exhibit-link" href={subject.href} onClick={(event) => {
+          if (subject.id !== "ballet" || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          if (beginEntrance(event.currentTarget)) event.preventDefault();
+        }}>{content}</Link>
       ) : (
         <article>{content}</article>
       )}
